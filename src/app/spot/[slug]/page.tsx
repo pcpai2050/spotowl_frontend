@@ -176,5 +176,6 @@ export function generateStaticParams() {
     { slug: "villa-in-mysore" },
     { slug: "cottage-in-mysore" },
     { slug: "apartment-in-mysore" },
+    { slug: "studio-in-marathalli" },
   ];
 } 
