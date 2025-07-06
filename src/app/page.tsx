@@ -1,103 +1,129 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+
+const sections = [
+  {
+    title: "Popular homes in South Goa",
+    listings: [
+      {
+        title: "Flat in Adsuli",
+        price: "₹3,652 for 2 nights",
+        rating: 5.0,
+        badge: "Guest favourite",
+        image: "/photo-1506744038136-46273834b3fb.avif",
+      },
+      {
+        title: "Apartment in Chauri",
+        price: "₹5,124 for 2 nights",
+        rating: 4.93,
+        badge: "Guest favourite",
+        image: "/photo-1465101046530-73398c7f28ca.avif",
+      },
+      {
+        title: "Guest house in Utorda",
+        price: "₹2,110 for 2 nights",
+        rating: 4.86,
+        badge: "Guest favourite",
+        image: "/photo-1512918728675-ed5a9ecdebfd.avif",
+      },
+      {
+        title: "Home in Candolim",
+        price: "₹5,820 for 2 nights",
+        rating: 4.83,
+        badge: "Guest favourite",
+        image: "/photo-1507089947368-19c1da9775ae.avif",
+      },
+      {
+        title: "Apartment in Benaulim",
+        price: "₹5,800 for 2 nights",
+        rating: 4.8,
+        badge: "Guest favourite",
+        image: "/photo-1464037866556-6812c9d1c72e.avif",
+      },
+      {
+        title: "Flat in Colva",
+        price: "₹3,194 for 2 nights",
+        rating: 4.94,
+        badge: "Guest favourite",
+        image: "/photo-1507525428034-b723cf961d3e.avif",
+      },
+      {
+        title: "Apartment in Siolim",
+        price: "₹7,304 for 2 nights",
+        rating: 4.78,
+        badge: "Guest favourite",
+        image: "/photo-1465101178521-c1a9136a3b99.avif",
+      },
+    ],
+  },
+  {
+    title: "Available in Mysore this weekend",
+    listings: [
+      {
+        title: "House in Mysore",
+        price: "₹4,000 for 2 nights",
+        rating: 4.9,
+        badge: "Guest favourite",
+        image: "/photo-1506744038136-46273834b3fb.avif",
+      },
+      {
+        title: "Villa in Mysore",
+        price: "₹6,200 for 2 nights",
+        rating: 4.85,
+        badge: "Guest favourite",
+        image: "/photo-1465101046530-73398c7f28ca.avif",
+      },
+      {
+        title: "Cottage in Mysore",
+        price: "₹3,800 for 2 nights",
+        rating: 4.8,
+        badge: "Guest favourite",
+        image: "/photo-1512918728675-ed5a9ecdebfd.avif",
+      },
+      {
+        title: "Apartment in Mysore",
+        price: "₹5,100 for 2 nights",
+        rating: 4.7,
+        badge: "Guest favourite",
+        image: "/photo-1507089947368-19c1da9775ae.avif",
+      },
+    ],
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main className="bg-[#F7F7F7] min-h-screen font-sans">
+      {/* Sections */}
+      {sections.map((section) => (
+        <section key={section.title} className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl md:text-2xl font-bold text-[#222222]">{section.title}</h2>
+            <button className="text-gray-500 hover:text-black p-2 rounded-full">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+          </div>
+          <div className="flex gap-6 overflow-x-auto pb-2">
+            {section.listings.map((listing) => (
+              <Link key={listing.title} href={`/spot/${encodeURIComponent(listing.title.replace(/\s+/g, '-').toLowerCase())}`} className="min-w-[260px] max-w-[260px] bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden flex flex-col relative">
+                <Image src={listing.image} alt={listing.title} width={260} height={192} className="w-full h-48 object-cover" loading="lazy" unoptimized />
+                <div className="absolute top-3 left-3 bg-[#F7F7F7] text-xs font-bold px-4 py-1 rounded-full shadow text-black" style={{backdropFilter: 'blur(2px)'}}>{listing.badge}</div>
+                <button className="absolute top-3 right-3 bg-white rounded-full p-1 shadow hover:bg-[#f3eafd]">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M10 17l-1.45-1.32C4.4 11.36 2 9.28 2 6.5 2 4.5 3.5 3 5.5 3c1.54 0 3.04 1 3.57 2.36h1.87C11.46 4 12.96 3 14.5 3 16.5 3 18 4.5 18 6.5c0 2.78-2.4 4.86-6.55 9.18L10 17z" stroke="#7440AD" strokeWidth="1.5" fill="none"/></svg>
+                </button>
+                <div className="p-4 flex flex-col flex-1">
+                  <span className="font-semibold text-gray-900 text-base mb-1">{listing.title}</span>
+                  <span className="text-gray-600 text-xs mb-1">{listing.price}</span>
+                  <span className="text-yellow-500 font-bold flex items-center text-xs">★ {listing.rating}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ))}
+    </main>
   );
 }
