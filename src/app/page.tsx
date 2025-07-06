@@ -6,38 +6,38 @@ import Link from "next/link";
 
 const sections = [
   {
-    title: "Popular homes in South Goa",
+    title: "Popular Spots in Bangalore",
     listings: [
       {
-        title: "Flat in Adsuli",
+        title: "Studio in Marathalli",
         price: "₹3,652 for 2 nights",
         rating: 5.0,
         badge: "Guest favourite",
         image: "/photo-1506744038136-46273834b3fb.avif",
       },
       {
-        title: "Apartment in Chauri",
+        title: "House in Indiranagar",
         price: "₹5,124 for 2 nights",
         rating: 4.93,
         badge: "Guest favourite",
         image: "/photo-1465101046530-73398c7f28ca.avif",
       },
       {
-        title: "Guest house in Utorda",
+        title: "Villa in Koramangala",
         price: "₹2,110 for 2 nights",
         rating: 4.86,
         badge: "Guest favourite",
         image: "/photo-1512918728675-ed5a9ecdebfd.avif",
       },
       {
-        title: "Home in Candolim",
+        title: "Podcast Studio in Kalyan Nagar",
         price: "₹5,820 for 2 nights",
         rating: 4.83,
         badge: "Guest favourite",
         image: "/photo-1507089947368-19c1da9775ae.avif",
       },
       {
-        title: "Apartment in Benaulim",
+        title: "PreWedding Shoot Garden in Whitefield",
         price: "₹5,800 for 2 nights",
         rating: 4.8,
         badge: "Guest favourite",
